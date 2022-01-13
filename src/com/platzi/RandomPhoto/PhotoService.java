@@ -66,8 +66,6 @@ public class PhotoService {
 		
 		String elJson = response.body().string();
 		
-		System.out.println(response.toString());
-		System.out.println(response.body().string());
 		//cortar corchetes
 		elJson = elJson.substring(1, elJson.length());
 		elJson = elJson.substring(0, elJson.length()-1);
@@ -81,16 +79,14 @@ public class PhotoService {
 
 		try {
 			URL url = new URL(imagen.getUrl());
-//			HttpURLConnection http = (HttpURLConnection) url.openConnection();
-//			http.addRequestProperty("User-Agent", "");
-			image = ImageIO.read(url);
-			
-			ImageIcon fondoImagen = new ImageIcon(image);
-			
 			HttpURLConnection httpcon = (HttpURLConnection) url.openConnection();
 			httpcon.addRequestProperty("User-Agent","");
 			
 			BufferedImage bufferedImage = ImageIO.read(httpcon.getInputStream());
+//			image = ImageIO.read(url);
+			
+			ImageIcon fondoImagen = new ImageIcon(bufferedImage);
+			
 			if(fondoImagen.getIconWidth()> 800) {
 	            Image fondo = fondoImagen.getImage();
 	            Image modificada = fondo.getScaledInstance(800, 400, java.awt.Image.SCALE_SMOOTH);

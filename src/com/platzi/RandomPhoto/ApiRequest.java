@@ -1,7 +1,6 @@
 package com.platzi.RandomPhoto;
 
 import java.io.IOException;
-import java.net.HttpURLConnection;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;

@@ -93,7 +93,7 @@ public class perroService {
 	        
 	        switch(seleccion){
 	            case 0:
-//	            	seeImage();
+	            	SSL();
 	                break;
 	            case 1:
 //	            	favourite(imagen);
