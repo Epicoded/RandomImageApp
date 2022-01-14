@@ -1,2 +1,2 @@
 # RandomImageApp
-Random Image App is an app thaty consumes an API with images and It can let you see random images everytime you pick a button.
+Random Image App is an app that consumes an API and It can let you see random images everytime you push a button.
